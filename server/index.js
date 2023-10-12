@@ -2,9 +2,11 @@
 //1. IMPORTACIONES 
 // ESModules 
 import express from "express"
+import cors from "cors";
 
 // 2.INICIALIZADORES
 const app =express()
+app.use(cors());
 
 const data=[{
     id:0,
@@ -12,8 +14,8 @@ const data=[{
     descripcion:"quiero una reservacion a colombia"
 },   {
       id:1,
-     title:"reservación 1",
-      descripcion:"quiero una reservacion a colombia"
+     title:"reservación 2",
+    descripcion:"quiero una reservacion a Brazil"
  }  ]
 
 //3.RUTAS
