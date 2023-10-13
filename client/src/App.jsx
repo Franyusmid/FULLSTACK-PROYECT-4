@@ -8,7 +8,8 @@ function App() {
 
   const [reservations,setReservations]=useState([]);
   const serverUrl = import.meta.env.VITE_SERVER_URL
-  console.log(serverUrl)
+
+  
 
 
   useEffect(()=>{
@@ -17,6 +18,7 @@ function App() {
       const AllReservations= await response.json();
 
       setReservations(AllReservations.data);
+      console.log(AllReservations)
 
       return;
 
