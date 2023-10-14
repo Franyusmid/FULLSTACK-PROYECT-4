@@ -46,16 +46,16 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-20 bg-black flex justify-center"> 
+      <div className="w-full h-20 bg-gray-700 flex justify-center"> 
         <h1 className="text-[#efb810] font-typelittle text-5xl self-center">PIMIENTA NEGRA</h1>
         <h2 className="text-[#efb810] font-typelittle text-1xl self-center">LA RESETA EN EQUILIBRIO</h2>
       </div>
-      <ul className='w-full h-auto'>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ul className='w-full h-auto flex flex-nowrap'>
+        <li>bvcbcv</li>
+        <li>xcvbxcvb</li>
+        <li>xcvbxcv</li>
+        <li>xcvbxvcb</li>
+        <li>xcvbxcv</li>
       </ul>
       
     
