@@ -4,10 +4,13 @@ import './App.css'
 
 function App() {
 
-
-
   const [reservations,setReservations]=useState([]);
+  const [newReservtion,setNewReservation]=useState({
+    title:"",
+    descripcion:""
+  })
   const serverUrl = import.meta.env.VITE_SERVER_URL
+ 
 
   
 
@@ -18,7 +21,7 @@ function App() {
       const AllReservations= await response.json();
 
       setReservations(AllReservations.data);
-      console.log(AllReservations)
+      
 
       return;
 
@@ -26,20 +29,36 @@ function App() {
     fetchReservations();
   },[]);
 
+  const handleSumit=(e)=> {
+    e.preventDefault()
+    console.log(e)
+  };
+  const handleChange =(e)=> {
+    console.log("e",e)
+    console.log("nombre event", e.target.name)
+
+    setNewReservation({
+      ...newReservtion,
+      [e.target.name]: e.target.value,
+
+    })
+  }
+
   return (
     <>
-     {reservations.length === 0 ? (
-     <p>no hay reservaciones...</p>
-     ):(
-        reservations.map((e)=> {
-          return (
-            <div key={e.id}>
-              <h1>{e.title}</h1>
-              <p>Descripcion: {e.descripcion}</p>
-            </div>
-          );
-        })
-      )}
+      <div className="w-full h-20 bg-black flex justify-center"> 
+        <h1 className="text-[#efb810] font-typelittle text-5xl self-center">PIMIENTA NEGRA</h1>
+        <h2 className="text-[#efb810] font-typelittle text-1xl self-center">LA RESETA EN EQUILIBRIO</h2>
+      </div>
+      <ul className='w-full h-auto'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
+    
     </>
   );
 }
