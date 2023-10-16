@@ -1,22 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  // Contenido
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
+  // Tema
   theme: {
     extend: {
-      fontFamily:{
-        'typelittle':['Dancing Script', 'cursive'],
+      colors: {
+        'HeaderColor': 'a8a47f',
+        'regal-Golden': '#efb810',
       },
-      colors:{
-        'regal-Golden':'#efb810',
-  
+      fontFamily: {
+        'typelittle': ['Dancing Script', 'cursive'],
+      },
     },
   },
-  plugins: [],
-}}
 
-// font-family: 'Dancing Script', ;
-// font-family: 'Kanit', sans-serif;
-// font-family: 'Roboto', sans-serif;
+  // Plugins
+  plugins: [],
+
+  // Exportación adicional (si es necesario)
+  // module.exports = {
+  //   theme: {
+  //     extend: {
+  //       // ...
+  //     },
+  //   },
+  // },
+};

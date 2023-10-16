@@ -1,6 +1,9 @@
-import { useState,useEffect } from 'react'
 
+
+import { useState,useEffect } from 'react'
 import './App.css'
+import logo from './assets/imagenes/logo.png'
+
 
 function App() {
 
@@ -46,19 +49,20 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-20 bg-gray-700 flex justify-center"> 
-        <h1 className="text-[#efb810] font-typelittle text-5xl self-center">PIMIENTA NEGRA</h1>
-        <h2 className="text-[#efb810] font-typelittle text-1xl self-center">LA RESETA EN EQUILIBRIO</h2>
-      </div>
-      <ul className='w-full h-auto flex flex-nowrap'>
-        <li>bvcbcv</li>
-        <li>xcvbxcvb</li>
-        <li>xcvbxcv</li>
-        <li>xcvbxvcb</li>
-        <li>xcvbxcv</li>
-      </ul>
-      
-    
+     <div className='bg-[#a8a47f] flex flex-row'>
+         <div className=' basis-1/4 p-2'>
+           <img src={logo} className='h-56 w-56'/>
+          </div>
+          <div className=" flex items-center">
+            <h1 className=" font-typelittle text-4xl ">"LA RESETA EN EQUILIBRIO"</h1>
+          </div>
+          <rf/>
+          <nav className='p'>
+             <a href="./components/menu">MENU</a>
+             <a href="./components/aboutUs">SOBRRE NOSOTROS</a>
+             <a href={reservation}>RESERVACIONES</a>
+          </nav>
+    </div>
     </>
   );
 }
