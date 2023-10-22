@@ -1,52 +1,52 @@
-
-//1. IMPORTACIONES 
-// ESModules 
-import express from "express"
+// / 1. IMPORTACIONES
+import express from "express";
 import cors from "cors";
 
-// 2.INICIALIZADORES
-const app =express()
+// 2. INICIALIZADORES
+const app = express();
+
 app.use(cors());
+app.use(express.json());
 
-const data=[{
-    id:0,
-    title:"reservación 1",
-    descripcion:"quiero una reservacion a colombia"
-},   {
-      id:1,
-     title:"reservación 2",
-    descripcion:"quiero una reservacion a Brazil"
- }  ]
+let data = [
+  {
+    id: 0,
+    title: "",
+    description: "",
+  },
+  {
+    id: 1,
+    title: "",
+    description: "",
+  },
+];
 
-//3.RUTAS
-//GET-OBTENCION DE DATOS (RESERVACIONES)
-//localhost:3005/
+// 3. RUTAS
+// GET - OBTENCIÓN DE DATOS (RESERVACIONES)
+// localhost:3005/
+app.get("/", (req, res) => {
+  res.json({
+    msg: "Este es un mensaje",
+    data: data,
+  });
+});
 
+// POST - CREAR UNA RESERVACIÓN
+app.post("/", (req, res) => {
+  console.log("req", req.body);
 
-app.get("/",(req,res)=>{
+  const { title, description } = req.body;
 
-    res.json({
-        msg:"Este es un menssaje",
-        data:data
-    })
-})
+  data.push({
+    title,
+    description,
+  });
 
-// POST-CREA UNA RESERVACION 
-app.post("/",(req,res)=>{
+  res.json({
+    msg: "Reservación agregada",
+    data: data,
+  });
+});
 
-    data.push({
-        id:2,
-        title:"reservacion 2",
-        descripcion:"quiero una reservacion de mesa para 2 personas"
-    })
-
-    res.json({
-        msg:"reservacion agregada",
-        data:data,
-    })
-})
-
-//4.LISTENERS
-
-app.listen(3005,() => console.log("servidor encendido"))
-
+// 4. LISTENERS
+app.listen(3005, () => console.log("servidor encendido"));

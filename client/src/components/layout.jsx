@@ -14,6 +14,7 @@ const layout = () => {
           <Link to="/reservation">RESERVACIONES</Link>
         </li>
       </nav>
+    
       <Outlet />
     </>
   );
