@@ -7,9 +7,6 @@ const layout = () => {
         <li className="list-none scroll px-8 text-2xl">
           <Link to="/aboutUs">QUIENES SOMOS</Link>
         </li>
-        <li className="list-none scroll px-8 text-2xl">
-          <Link to="/menu">MENU</Link>
-        </li>
         <li  className="list-none scroll px-8 text-2xl">
           <Link to="/reservation">RESERVACIONES</Link>
         </li>

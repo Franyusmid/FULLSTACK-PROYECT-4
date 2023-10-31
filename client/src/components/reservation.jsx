@@ -27,8 +27,7 @@ function reservation() {
   const handleSubmit = (e, data) => {
     e.preventDefault();
 
-    console.log("data", data);
-
+   
     const sendData = async () => {
       const response = await fetch(serverUrl, {
         headers: {
@@ -39,8 +38,7 @@ function reservation() {
       });
 
       const successData = await response.json();
-      console.log("successData", successData);
-
+      
       setReservations(successData.data);
     };
 
@@ -56,29 +54,36 @@ function reservation() {
 
   return (
     <>
-      <div className="flex row justify-center">
+      <div className="flex row justify-evenly">
         <form
           onSubmit={(e) => handleSubmit(e, newReservation)}
+          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
-          <div>
-            <label>Cliente</label>
-            <input className="border-indigo-500/100"
+          <div className="mb-10">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="client">Cliente</label>
+            <input
               name="title"
               onChange={(e) => handleChange(e)}
               value={newReservation.title}
-              
-            />
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none 
+              focus:shadow-outline" id="client" type="text" placeholder="cliente"/>
           </div>
-          <div>
-            <label>Tipo de reserva</label>
+          <div className="mb-6">
+            <label  className="block text-gray-700 text-sm font-bold mb-2" htmlFor="reservation">Pedido</label>
             <textarea
               name="description"
               onChange={(e) => handleChange(e)}
               value={newReservation.description}
+              className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="¿que desea ordenar?"
             />
+             <p className="text-red-500 text-xs italic">por favor haga su pedido</p>
           </div>
+          <div>
 
-          <button className="text-white bg-black">Crear reservación</button>
+            <button className="bg-[#a8a47f] hover:bg-[#a8a47f] text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >Crear reservación</button>
+
+          </div>
+          
         </form>
      
       <main className="items-center">
