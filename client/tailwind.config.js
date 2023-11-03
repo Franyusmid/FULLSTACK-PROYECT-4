@@ -16,10 +16,7 @@ export default {
       fontFamily: {
         'typelittle': ['Dancing Script', 'cursive'],
       },
-      backgroundImage: {
-        'vino': "url('./src/assets/imagenes/vino.PNG')",
-        
-    },
+     
   },
 
   // Plugins

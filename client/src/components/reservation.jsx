@@ -57,7 +57,7 @@ function reservation() {
       <div className="flex row justify-evenly">
         <form
           onSubmit={(e) => handleSubmit(e, newReservation)}
-          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-10">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="client">Cliente</label>
@@ -86,9 +86,9 @@ function reservation() {
           
         </form>
      
-      <main className="items-center">
+      <main className="grid justify-center items-center">
         {reservations.length === 0 ? (
-          <p>No hay reservaciones...</p>
+          <p className="text-2xl bg-cyan-300 shadow-2xl w-80 h-80 rounded-md flex justify-center items-center">No hay reservaciones...</p>
         ) : (
           reservations.map((e) => {
             return (
