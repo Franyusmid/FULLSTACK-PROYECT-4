@@ -1,7 +1,7 @@
-import hamburguesa from './imagenes/hamburguesa';
-import lasagna from './imagenes/lasagna';
-import logo from './imagenes/logo';
-import pizza from './imagenes/pizza';
-import vino from './imagenes/vino';
+import hamburguesa from './imagenes/hamburguesa.png';
+import lasagna from './imagenes/lasagna.png';
+import logo from './imagenes/logo.png';
+import pizza from './imagenes/pizza.png';
+import vino from './imagenes/vino.png';
 
 export { hamburguesa, lasagna, logo, pizza, vino };
