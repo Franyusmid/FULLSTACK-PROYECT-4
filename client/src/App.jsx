@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import './App.css';
 import logo from './assets/imagenes/logo.png';
@@ -19,13 +19,14 @@ function App() {
             <h1 className=' text-3xl font-typelittle'>LA RESETA EN EQUILIBRIO</h1>
           </div>
         </div>
-        <main className="bg-[url('/client/src/assets/imagenes/vino.PNG')] flex-grow">
-          <Routes>
-            <Route path='/' element={<Layout />}>
-              <Route path='/reservation' element={<Reservation />}></Route>
-              <Route path='/aboutUs' element={<AboutUs />}></Route>
-            </Route>
-          </Routes>
+        <main className="flex-grow">
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route path='/reservation' element={<Reservation />} />
+            <Route path='/aboutUs' element={<AboutUs />} />
+            <Route path='/*' element={<Navigate to="/aboutUs" />} />
+          </Route>
+        </Routes>
         </main>
         <footer>
           <div className='bg-[#a8a47f] text-3xl font-typelittle  w-full h-14 flex justify-center items-center'>
