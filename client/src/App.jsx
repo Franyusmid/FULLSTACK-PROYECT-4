@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import './App.css';
-import logo from './assets/imagenes/logo.png';
+import logo from './assets/imagenes/logo.png'
 import Layout from './components/layout';
 import Reservation from './components/reservation';
 
