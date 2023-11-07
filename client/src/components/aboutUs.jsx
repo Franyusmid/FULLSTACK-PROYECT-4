@@ -1,5 +1,5 @@
 
-import pizza from '../assets/imagenes/pizza.png';
+
 const aboutUs =()=> {
     return (
 
@@ -7,7 +7,8 @@ const aboutUs =()=> {
         
         <div className='w-full p-10 flex flex-row grid-flow-col gap-20'>
           <div className='pb-10'>
-            <img src={pizza} className='h-80 w-80 pb-10 rounded' />
+            <img src="https://photos.google.com/photo/AF1QipO3Wmq5ZEH0Z_6C-tsfwa-gdOxPahlbwXMtbMzw" 
+            className='h-80 w-80 pb-10 rounded' />
           </div>
           <div className='flex-col max-w-2xl'>
             <h2 className='text text-2xl flex justify-center'>NUESTRA MISION</h2>
