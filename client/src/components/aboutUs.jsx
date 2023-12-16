@@ -7,7 +7,7 @@ const aboutUs =()=> {
         
         <div className='w-full p-10 flex flex-row grid-flow-col gap-20'>
           <div className='pb-10'>
-            <img src="https://photos.google.com/photo/AF1QipO3Wmq5ZEH0Z_6C-tsfwa-gdOxPahlbwXMtbMzw" 
+            <img src="https://res.cloudinary.com/dcvzzndge/image/upload/v1702723154/pizza_lyfnp5.png" 
             className='h-80 w-80 pb-10 rounded' />
           </div>
           <div className='flex-col max-w-2xl'>

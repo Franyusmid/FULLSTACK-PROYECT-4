@@ -4,7 +4,7 @@ import './App.css';
 
 import Layout from './components/layout';
 import Reservation from './components/reservation';
-import lasagna from './assets/imagenes/lasagna.png';
+
 
 
 import AboutUs from './components/aboutUs';
@@ -15,7 +15,7 @@ function App() {
       <div className='flex flex-col min-h-screen'>
         <div className='bg-[#a8a47f] flex flex-row h-32'>
           <div className='basis-1/4 p-2 '>
-            <img src={lasagna}
+            <img src="https://res.cloudinary.com/dcvzzndge/image/upload/v1702722899/logo_wv3yk3.png"
              className='h-28 w-28' />
           </div>
           <div className='grow w-full h-full flex justify-evenly items-center'>

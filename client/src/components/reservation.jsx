@@ -57,7 +57,7 @@ function reservation() {
       <div className="flex row justify-evenly">
         <form
           onSubmit={(e) => handleSubmit(e, newReservation)}
-          className="bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-[#a8a47f] shadow-2xl rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-10">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="client">Cliente</label>
@@ -65,7 +65,7 @@ function reservation() {
               name="title"
               onChange={(e) => handleChange(e)}
               value={newReservation.title}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none 
+              className="text-red-500 text-xs shadow appearance-none border rounded w-full py-2 px-3 text-gray-00 leading-tight focus:outline-none 
               focus:shadow-outline" id="client" type="text" placeholder="cliente"/>
           </div>
           <div className="mb-6">
@@ -80,7 +80,7 @@ function reservation() {
           </div>
           <div>
 
-            <button className="bg-[#a8a47f] hover:bg-[#a8a47f] text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >Crear reservación</button>
+            <button className="bg-black hover:bg-[#2b2818] text-white font-bold py-2 px-4 rounded border-blac" >Crear reservación</button>
 
           </div>
           
